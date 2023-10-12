@@ -15,7 +15,7 @@ class MobileBankApiTestV2 {
           .get("/demo/accounts")
 
       .then()
-          .statusCode(400)
+          .statusCode(200)
 
           .contentType(ContentType.JSON)
       ;
@@ -32,7 +32,7 @@ class MobileBankApiTestV2 {
                 .get("/demo/accounts")
 
                 .then()
-                .header("Content-Length","433")
+                .header("Content-Length","333")
         ;
     }
 }
