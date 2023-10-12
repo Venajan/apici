@@ -29,8 +29,7 @@
         "default": 0
       },
       "currency": {
-        "type": "string",
-        "pattern": "RUB|RUR|USD"
+        "type": "string"
       }
     }
   }
