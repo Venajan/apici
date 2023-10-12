@@ -19,4 +19,17 @@ class MobileBankApiTestV4 {
           .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
       ;
     }
+
+    @Test
+    void shouldReturnStatusLine() {
+
+        given()
+                .baseUri("http://localhost:9999/api/v1")
+
+                .when()
+                .get("/demo/accounts")
+
+                .then()
+                .statusLine("HTTP/1.1 200 OK");
+    }
 }

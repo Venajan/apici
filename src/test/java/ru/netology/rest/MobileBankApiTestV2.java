@@ -20,4 +20,19 @@ class MobileBankApiTestV2 {
           .contentType(ContentType.JSON)
       ;
     }
+
+    @Test
+    void shouldCheckContentLength() {
+
+
+        given()
+                .baseUri("http://localhost:9999/api/v1")
+
+                .when()
+                .get("/demo/accounts")
+
+                .then()
+                .header("Content-Length","433")
+        ;
+    }
 }
